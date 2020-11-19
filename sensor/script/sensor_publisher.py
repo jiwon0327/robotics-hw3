@@ -2,7 +2,7 @@
 import rospy
 from geometry_msgs.msg import Point
 from common_msgs.msg import cm
-from common_msgs.srv import cm, cmRequest
+from common_msgs.srv import AddTwoNum, AddTwoNumRequest
 
 rospy.init_node('sensor_publisher')
 pub = rospy.Publisher('sensor_msg', cm, queue_size=1)
@@ -18,7 +18,7 @@ while not rospy.is_shutdown():
 
 rospy.init_node('service_client')
 rospy.wait_for_service('add_two_number')
-requester = rospy.ServiceProxy('add_two_number', cm)
+requester = rospy.ServiceProxy('add_two_number', AddTwoNum)
 print "requester type:", type(requester), ", callable?", callable(requester)
 rate = rospy.Rate(10)
 count = 0
