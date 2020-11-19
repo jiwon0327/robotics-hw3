@@ -14,9 +14,3 @@ catkin_package(
   CATKIN_DEPENDS common_msgs geometry_msgs rospy std_msgs
 #  DEPENDS system_lib
 )
-
-
-include_directories(
-# include
-  ${catkin_INCLUDE_DIRS}
-)

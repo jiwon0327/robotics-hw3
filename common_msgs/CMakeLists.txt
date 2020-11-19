@@ -7,10 +7,9 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
 )
-
-add_message_files(
-	FILES
-	cm.msg
+add_service_files(
+  FILES
+  cm.srv
 )
 
 generate_messages(
